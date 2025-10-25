@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using System.Text;
 
 namespace TeleBot.Services
 {
@@ -49,18 +50,59 @@ namespace TeleBot.Services
                 // Dùng ngày đầu tiên làm ngày chung
                 string dateInfo = items[0].Date;
 
-                string result = "💎 *Giá vàng BTMC hôm nay* 💎\n" +
-                                $"📅 _Cập nhật: {EscapeMarkdown(dateInfo)}_\n\n" +
-                                "━━━━━━━━━━━━━━━━━━\n\n";
+                string result = $"🏅 *BẢNG GIÁ VÀNG BTMC* 🏅\n" +
+                $"📅 {EscapeMarkdownV2(dateInfo)}\n\n";
 
-                foreach (var item in items)
+                result += $"🟡 *VÀNG SJC*\n";
+                foreach (var item in items.Where(x => x.Name.Contains("SJC")))
                 {
-                    result += $"🏷 *{EscapeMarkdown(item.Name)}*\n" +
-                              $"💰 Mua: `{item.Buy}` | Bán: `{item.Sell}`\n\n";
+                    string name = EscapeMarkdownV2(item.Name.Split('(')[0].Trim());
+                    result += $"   💎 {name}\n";
+                    result += $"      ╰─ Mua: `{FormatCurrency(item.Buy)} đ`\n";
+                    result += $"      ╰─ Bán: `{FormatCurrency(item.Sell)} đ`\n";
                 }
 
-                result += "━━━━━━━━━━━━━━━━━━\n" +
-                          "📊 _Nguồn: BTMC.vn_";
+                result += $"\n🔵 *VÀNG KHÁC*\n";
+                foreach (var item in items.Where(x => !x.Name.Contains("SJC")))
+                {
+                    string emoji = item.Name.Contains("Nhẫn") ? "💍" : "🪙";
+                    string name = EscapeMarkdownV2(item.Name.Split('(')[0].Trim());
+                    result += $"   {emoji} {name}\n";
+                    result += $"      ╰─ Mua: `{FormatCurrency(item.Buy)} đ`\n";
+                    result += $"      ╰─ Bán: `{FormatCurrency(item.Sell)} đ`\n";
+                }
+
+                result += $"\n📊 _Nguồn: BTMC.vn_";
+
+                // Hàm format currency
+                string FormatCurrency(string price)
+                {
+                    if (string.IsNullOrEmpty(price)) return "N/A";
+
+                    if (long.TryParse(price.Replace(".", "").Replace(",", ""), out long number))
+                    {
+                        return number.ToString("N0", new CultureInfo("vi-VN")).Replace(",", ".");
+                    }
+                    return price;
+                }
+
+                // Hàm escape cho Markdown V2
+                string EscapeMarkdownV2(string text)
+                {
+                    if (string.IsNullOrEmpty(text)) return text;
+
+                    char[] specialChars = { '_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!' };
+                    StringBuilder result = new StringBuilder();
+
+                    foreach (char c in text)
+                    {
+                        if (Array.Exists(specialChars, x => x == c))
+                            result.Append('\\');
+                        result.Append(c);
+                    }
+
+                    return result.ToString();
+                }
 
                 return result;
             }

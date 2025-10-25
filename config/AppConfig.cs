@@ -16,7 +16,7 @@ namespace TeleBot.Config
             var config = new AppConfig();
 
             // 🧩 1️⃣ Đọc từ biến môi trường (Render / Docker / Server)
-            var tokenFromEnv = Environment.GetEnvironmentVariable("Bot__Token");
+            var tokenFromEnv = Environment.GetEnvironmentVariable("BOT_TOKEN");
             var adminIdsFromEnv = Environment.GetEnvironmentVariable("Bot__AdminIds");
             var environmentFromEnv = Environment.GetEnvironmentVariable("App__Environment");
             var logLevelFromEnv = Environment.GetEnvironmentVariable("App__LogLevel");

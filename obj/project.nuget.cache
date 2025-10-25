@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ym6eMkYn7KdEPPV9VNuaXSx84puMa3pNuy9kjiaePXTGWL+XtlLkvPPAeQAZMsKf34GZyggqLF+4uiyGT0Hs+w==",
+  "success": true,
+  "projectFilePath": "G:\\Nghịch\\Tro ly tele\\TeleCodeFeeBot\\TeleCodeFeeBot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\8.3.1.1\\harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\8.3.1.1\\harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\8.0.0\\microsoft.extensions.options.configurationextensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\scottplot\\5.1.57\\scottplot.5.1.57.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\skiasharp\\3.119.0\\skiasharp.3.119.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\skiasharp.harfbuzz\\3.119.0\\skiasharp.harfbuzz.3.119.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\3.119.0\\skiasharp.nativeassets.linux.nodependencies.3.119.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.0\\skiasharp.nativeassets.macos.3.119.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.0\\skiasharp.nativeassets.win32.3.119.0.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
+    "C:\\Users\\THINKPAD\\.nuget\\packages\\telegram.bot\\22.7.2\\telegram.bot.22.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}

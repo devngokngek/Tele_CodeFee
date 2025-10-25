@@ -1,0 +1,118 @@
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.csproj.AssemblyReference.cache
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.GeneratedMSBuildEditorConfig.editorconfig
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.AssemblyInfoInputs.cache
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.AssemblyInfo.cs
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.csproj.CoreCompileInputs.cache
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.exe
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.deps.json
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.runtimeconfig.json
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.pdb
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\System.Text.Json.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\Telegram.Bot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCode.6A0EB194.Up2Date
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\refint\TeleCodeFeeBot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.pdb
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.genruntimeconfig.cache
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\ref\TeleCodeFeeBot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.sourcelink.json
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\HarfBuzzSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\ScottPlot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\SkiaSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\SkiaSharp.HarfBuzz.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-loongarch64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-loongarch64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-riscv64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-riscv64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x64\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x86\native\libSkiaSharp.so
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.csproj.AssemblyReference.cache
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.GeneratedMSBuildEditorConfig.editorconfig
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.AssemblyInfoInputs.cache
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.AssemblyInfo.cs
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.csproj.CoreCompileInputs.cache
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.sourcelink.json
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\refint\TeleCodeFeeBot.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.pdb
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.exe
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.deps.json
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.runtimeconfig.json
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\TeleCodeFeeBot.pdb
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\HarfBuzzSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\ScottPlot.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\SkiaSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\SkiaSharp.HarfBuzz.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\System.Text.Json.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\Telegram.Bot.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-loongarch64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-loongarch64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-riscv64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-riscv64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x64\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x86\native\libHarfBuzzSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-arm64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-loongarch64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-loongarch64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-riscv64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-riscv64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x64\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\linux-x86\native\libSkiaSharp.so
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCode.6A0EB194.Up2Date
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.genruntimeconfig.cache
+G:\Nghịch\Tro ly tele\TeleCodeFeeBot\obj\Debug\net8.0\ref\TeleCodeFeeBot.dll

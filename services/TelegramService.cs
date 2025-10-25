@@ -17,9 +17,10 @@ namespace TeleBot.Services
         private CancellationTokenSource _cts;
         private readonly GoldPriceService _goldService = new();
         private readonly UserService _userService;
+        private readonly ComicService _comicService = new();
 
         // 👇 Thay bằng chatId thật của bạn (lấy bằng cách gửi /start rồi đọc log)
-        private readonly long _adminChatId = 5642891542;
+        private long _adminChatId = 5642891542;
 
         public TelegramService(AppConfig config)
         {
@@ -47,7 +48,7 @@ namespace TeleBot.Services
             {
                 AllowedUpdates = Array.Empty<UpdateType>()
             };
-
+        
             _bot.StartReceiving(
                 HandleUpdateAsync,
                 HandleErrorAsync,
@@ -56,9 +57,10 @@ namespace TeleBot.Services
             );
 
             Console.WriteLine("🤖 Bot đang chạy... Nhấn Ctrl+C để dừng.");
-
             // chạy task nền cập nhật giá vàng liên tục
             _ = Task.Run(() => AutoUpdateGoldPriceAsync(_cts.Token));
+            //truyện
+            _ = Task.Run(() => AutoUpdateComicAsync(_cts.Token));
 
             await Task.Delay(-1, _cts.Token);
         }
@@ -95,6 +97,17 @@ namespace TeleBot.Services
                             "/giavang - Xem giá vàng hiện tại\n" +
                             "/help - Hướng dẫn sử dụng";
                     break;
+                // case string msg when msg.StartsWith("/truyen"):
+                //     string query = msg.Replace("/truyen", "").Trim();
+                //     if (string.IsNullOrWhiteSpace(query))
+                //     {
+                //         reply = "📚 Nhập tên truyện sau lệnh. Ví dụ:\n`/truyen Nga Lão Ma Thần`";
+                //     }
+                //     else
+                //     {
+                //         reply = await _comicService.GetComicInfoAsync(query);
+                //     }
+                //     break;
 
                 default:
                     reply = "❓ Lệnh không hợp lệ. Gõ /help để xem danh sách lệnh.";
@@ -119,7 +132,6 @@ namespace TeleBot.Services
                 try
                 {
                     var goldInfo = await _goldService.GetGoldPriceAsync();
-
                     await _bot.SendMessage(
                         chatId: _adminChatId,
                         text: $"💰 *Cập nhật giá vàng BTMC mới nhất:*\n\n{goldInfo}\n⏰ {DateTime.Now:HH:mm:ss dd/MM/yyyy}",
@@ -135,10 +147,39 @@ namespace TeleBot.Services
                 }
 
                 // ⏰ chờ 5 phút
-                await Task.Delay(TimeSpan.FromSeconds(5), token);
+                await Task.Delay(TimeSpan.FromHours(1), token);
             }
         }
+        // auto load truyen service
+        private async Task AutoUpdateComicAsync(CancellationToken token)
+        {
+            Console.WriteLine("⏳ Bắt đầu tự động lấy thông tin truyện mỗi 1 giờ...");
+            while (!token.IsCancellationRequested)
+            {
+                try
+                    {
+                        var info = await _comicService.GetComicInfoAsync();
 
+                        await _bot.SendMessage(
+                            chatId: _adminChatId,
+                            text: info,
+                            parseMode: ParseMode.Markdown,
+                            cancellationToken: token
+                        );
+
+                        Console.WriteLine($"✅ Đã gửi thông tin truyện' lúc {DateTime.Now:HH:mm:ss}");
+                    }
+                catch (Exception ex)
+                    {
+                        Console.WriteLine($"⚠️ Lỗi khi lấy truyện': {ex.Message}");
+                    }
+
+                await Task.Delay(TimeSpan.FromSeconds(10), token);
+            
+                // ⏰ Lặp lại sau 1 giờ
+                await Task.Delay(TimeSpan.FromSeconds(30), token);
+            }
+        }
         private Task HandleErrorAsync(ITelegramBotClient bot, Exception ex, CancellationToken token)
         {
             Console.WriteLine($"⚠️ Lỗi bot: {ex.Message}");
