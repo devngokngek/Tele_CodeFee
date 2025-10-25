@@ -22,3 +22,4 @@ G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\refint\TeleCodeFeeBot.dll
 G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.pdb
 G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.genruntimeconfig.cache
 G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\ref\TeleCodeFeeBot.dll
+G:\Nghịch\BotTele\TeleCodeFeeBot\obj\Debug\net8.0\TeleCodeFeeBot.sourcelink.json

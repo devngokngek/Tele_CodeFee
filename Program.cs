@@ -21,14 +21,17 @@ class Program
 
         try
         {
-            await botService.StartAsync();
+            // Chạy KeepAlive server và Bot cùng lúc
+            var keepAliveTask = KeepAliveServer.StartAsync();
+            var botTask = botService.StartAsync();
 
-            Console.WriteLine("🤖 Bot đang chạy... Nhấn Ctrl+C để dừng.");
-            await Task.Delay(-1); // Giữ bot chạy liên tục
+            Console.WriteLine("🤖 Bot đang chạy cùng KeepAlive Server... Nhấn Ctrl+C để dừng.");
+
+            await Task.WhenAll(keepAliveTask, botTask); // đợi cả 2 task
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"⚠️ Lỗi khởi động bot: {ex.Message}");
+            Console.WriteLine($"⚠️ Lỗi khởi động bot hoặc server: {ex.Message}");
         }
     }
 }
