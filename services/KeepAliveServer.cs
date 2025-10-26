@@ -11,45 +11,43 @@ namespace TeleBot.Services
         {
             try
             {
-                // Lấy PORT từ Render (Render luôn đặt biến môi trường PORT)
                 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
-                var prefix = $"http://0.0.0.0:{port}/";
+                var url = $"http://localhost:{port}/";
+
 
                 var listener = new HttpListener();
-                listener.Prefixes.Add(prefix);
+                listener.Prefixes.Add(url);
                 listener.Start();
 
-                Console.WriteLine($"🌐 KeepAlive Server đang chạy tại {prefix}");
+                // 🔥 Log ra ngay khi server bắt đầu
+                Console.WriteLine($"🌐 KeepAlive server đang lắng nghe tại {url}");
 
-                // Vòng lặp nhận request và trả về phản hồi
+                // 🔄 Task chạy nền
                 _ = Task.Run(async () =>
                 {
-                    while (listener.IsListening)
+                    while (true)
                     {
                         try
                         {
-                            var context = await listener.GetContextAsync();
-                            var response = context.Response;
-                            var message = "✅ Bot Telegram đang chạy trên Render.com";
+                            var ctx = await listener.GetContextAsync();
+                            var response = ctx.Response;
 
-                            var buffer = Encoding.UTF8.GetBytes(message);
-                            response.ContentLength64 = buffer.Length;
+                            var message = Encoding.UTF8.GetBytes("✅ Bot is running on Render!");
                             response.ContentType = "text/plain; charset=utf-8";
-
-                            await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
+                            response.ContentLength64 = message.Length;
+                            await response.OutputStream.WriteAsync(message, 0, message.Length);
                             response.OutputStream.Close();
                         }
-                        catch (HttpListenerException) { break; } // Khi listener stop
                         catch (Exception ex)
                         {
-                            Console.WriteLine($"⚠️ Lỗi KeepAliveServer: {ex.Message}");
+                            Console.WriteLine($"⚠️ Lỗi KeepAlive: {ex.Message}");
                         }
                     }
                 });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"❌ Không thể khởi động KeepAlive Server: {ex.Message}");
+                Console.WriteLine($"❌ Lỗi khi khởi động KeepAlive server: {ex.Message}");
             }
         }
     }
