@@ -10,13 +10,14 @@ namespace TeleBot.Config
     {
         public BotConfig Bot { get; set; } = new();
         public AppSettings App { get; set; } = new();
+        public GeminiConfig Gemini { get; set; } = new();
 
         public static AppConfig Load(string path)
         {
             var config = new AppConfig();
 
-            // 🧩 1️⃣ Đọc từ biến môi trường (Render / Docker / Server)
             var tokenFromEnv = Environment.GetEnvironmentVariable("BOT_TOKEN");
+            var geminiFromEnv = Environment.GetEnvironmentVariable("GEM_TOKEN");
             var adminIdsFromEnv = Environment.GetEnvironmentVariable("Bot__AdminIds");
             var environmentFromEnv = Environment.GetEnvironmentVariable("App__Environment");
             var logLevelFromEnv = Environment.GetEnvironmentVariable("App__LogLevel");
@@ -25,10 +26,13 @@ namespace TeleBot.Config
             {
                 config.Bot.Token = tokenFromEnv;
             }
+            if (!string.IsNullOrEmpty(geminiFromEnv))
+            {
+                config.Gemini.ApiKey = geminiFromEnv;
+            }
 
             if (!string.IsNullOrEmpty(adminIdsFromEnv))
             {
-                // Cho phép nhiều ID, phân cách bằng dấu phẩy
                 config.Bot.AdminIds = adminIdsFromEnv
                     .Split(',', StringSplitOptions.RemoveEmptyEntries)
                     .Select(id => long.TryParse(id.Trim(), out var parsed) ? parsed : 0)
@@ -42,14 +46,12 @@ namespace TeleBot.Config
             if (!string.IsNullOrEmpty(logLevelFromEnv))
                 config.App.LogLevel = logLevelFromEnv;
 
-            // 🧩 2️⃣ Nếu chạy local (có file appsettings.json) → đọc thêm
             if (File.Exists(path))
             {
                 var json = File.ReadAllText(path);
                 var fileConfig = JsonSerializer.Deserialize<AppConfig>(json,
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                // chỉ gán nếu chưa có từ Env
                 if (string.IsNullOrEmpty(config.Bot.Token))
                     config.Bot.Token = fileConfig.Bot.Token;
 
@@ -61,6 +63,8 @@ namespace TeleBot.Config
 
                 if (string.IsNullOrEmpty(config.App.LogLevel))
                     config.App.LogLevel = fileConfig.App.LogLevel;
+                if (string.IsNullOrEmpty(config.Gemini.ApiKey))
+                    config.Gemini.ApiKey = fileConfig.Gemini.ApiKey;
             }
 
             return config;
@@ -77,5 +81,9 @@ namespace TeleBot.Config
     {
         public string Environment { get; set; } = "Development";
         public string LogLevel { get; set; } = "Information";
+    }
+        public class GeminiConfig
+    {
+        public string ApiKey { get; set; } = "";
     }
 }

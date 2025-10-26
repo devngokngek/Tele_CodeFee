@@ -51,8 +51,7 @@ namespace TeleBot.Services
                     string status = item.GetProperty("status").GetString() ?? "(Không rõ)";
                     string thumb = item.GetProperty("thumb_url").GetString() ?? "";
                     string author = item.GetProperty("author")[0].GetString() ?? "Đang cập nhật";
-                    
-                    // Sửa lỗi: Lấy DateTime thay vì string để so sánh
+
                     DateTime updatedAt = item.TryGetProperty("updatedAt", out var upd)
                         ? upd.GetDateTime()
                         : DateTime.MinValue;
@@ -62,12 +61,12 @@ namespace TeleBot.Services
                         : "(không rõ)";
 
                     // Sửa lỗi: So sánh ngày thay vì parse string
-                    //bool isUpdatedToday = updatedAt.Date == DateTime.Today;
-                    DateTime specificDate = new DateTime(2025, 10, 25);
-                    Console.WriteLine(updatedAt.Date);
-                    Console.WriteLine("a:" + specificDate);
+                    bool isUpdatedToday = updatedAt.Date == DateTime.Today;
+                    //DateTime specificDate = new DateTime(2025, 10, 25);
+                    //Console.WriteLine(updatedAt.Date);
+                    //Console.WriteLine("a:" + specificDate);
 
-                    bool isUpdatedToday = updatedAt.Date == specificDate.Date;
+                    //bool isUpdatedToday = updatedAt.Date == specificDate.Date;
 
                     if (isUpdatedToday)
                     {
@@ -98,7 +97,6 @@ namespace TeleBot.Services
                     }
                     else
                     {
-                        // Có thể comment dòng này nếu không muốn hiển thị truyện không cập nhật
                         sb.AppendLine($"ℹ️ Truyện {name} chưa có cập nhật hôm nay.\n");
                     }
                 }
@@ -116,7 +114,6 @@ namespace TeleBot.Services
                 }
             }
 
-            // Thêm thống kê tổng quan
             if (updatedCount == 0)
             {
                 sb.Insert(0, "📊 *KHÔNG CÓ TRUYỆN NÀO CẬP NHẬT HÔM NAY*\n\n");
@@ -128,7 +125,6 @@ namespace TeleBot.Services
 
             return sb.ToString();
         }
-        // 🟢 Hàm hỗ trợ định dạng trạng thái
         private string GetStatusEmoji(string status)
         {
             return status.ToLower() switch
@@ -140,7 +136,6 @@ namespace TeleBot.Services
             };
         }
 
-        // 🧾 Hàm định dạng mô tả
         private string FormatDescription(string desc)
         {
             if (string.IsNullOrEmpty(desc)) return "_Chưa có mô tả_";
@@ -152,7 +147,6 @@ namespace TeleBot.Services
             return EscapeMarkdownV2(cleanDesc);
         }
 
-        // 📜 Hàm định dạng danh sách chương
         private string FormatChapterList(string chapList)
         {
             if (string.IsNullOrEmpty(chapList)) return "_Chưa có chương nào_";
@@ -174,7 +168,6 @@ namespace TeleBot.Services
             return result.ToString();
         }
 
-        // 🔤 Escape MarkdownV2 cho Telegram
         private string EscapeMarkdownV2(string text)
         {
             if (string.IsNullOrEmpty(text)) return text;
@@ -192,7 +185,6 @@ namespace TeleBot.Services
             return result.ToString();
         }
 
-        // 🔡 Chuyển tiếng Việt sang slug hợp lệ
         private static string ToSlug(string text)
         {
             text = text.ToLower();

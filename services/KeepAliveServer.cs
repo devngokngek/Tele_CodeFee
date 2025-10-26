@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace TeleBot.Services
@@ -10,26 +11,35 @@ namespace TeleBot.Services
         {
             // Render cung cấp PORT qua biến môi trường
             var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+            var url = $"http://0.0.0.0:{port}/";
 
-            var listener = new HttpListener();
-            listener.Prefixes.Add($"http://*:{port}/");
+            using var listener = new HttpListener();
+            listener.Prefixes.Add(url);
             listener.Start();
 
-            Console.WriteLine($"🌐 KeepAlive server chạy trên cổng {port}");
+            Console.WriteLine($"🌐 KeepAlive Server đang chạy tại {url}");
 
-            // Task chạy ngầm để trả về HTTP 200 cho mọi request
-            _ = Task.Run(async () =>
+            while (true)
             {
-                while (true)
+                try
                 {
-                    var ctx = await listener.GetContextAsync();
-                    var res = ctx.Response;
-                    var msg = System.Text.Encoding.UTF8.GetBytes("Bot is running ✅");
-                    res.ContentLength64 = msg.Length;
-                    await res.OutputStream.WriteAsync(msg);
-                    res.OutputStream.Close();
+                    var context = await listener.GetContextAsync();
+                    var response = context.Response;
+
+                    string message = "✅ Bot Telegram đang chạy trên Render.com";
+                    byte[] buffer = Encoding.UTF8.GetBytes(message);
+
+                    response.ContentType = "text/plain; charset=utf-8";
+                    response.ContentLength64 = buffer.Length;
+
+                    await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
+                    response.OutputStream.Close();
                 }
-            });
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"⚠️ Lỗi KeepAliveServer: {ex.Message}");
+                }
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ namespace TeleBot.Handlers
         {
             if (callback.Data == null) return;
 
-            // Ví dụ xử lý callback inline button
             await bot.AnswerCallbackQuery(callback.Id, $"Bạn vừa chọn: {callback.Data}", cancellationToken: token);
             await bot.SendMessage(callback.Message.Chat.Id, $"👉 Callback nhận được: {callback.Data}", cancellationToken: token);
         }
